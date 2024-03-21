@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="counter"></h1>
+    <h2 id="myCounter"></h2>
+    <button onclick="plus()">+</button>
+    <button onclick="minus()">-</button>
+</body>
+</html>
+<script>
+    let counter = document.getElementById("counter");
+    let count = 0
+    // counter.innerHTML =  count++
+    function plus(){
+        
+        if (count == 10){
+           
+            counter.innerHTML=count
+            return;
+        }else{
+            counter.innerHTML =  count++
+        }
+
+        
+    }
+
+    
+    function minus(){
+        if(count == 0){
+        counter.innerHTML = count
+    return;
+        }else{
+            counter.innerHTML =  count--  
+        }
+    }
+
+let myNum = 0
+let myCounter = document.getElementById("myCounter");
+function increasing(){
+    myNum++;
+    myCounter.innerHTML = myNum;
+    if(myNum == "10"){
+        clearInterval(increase)
+
+    }
+}
+
+let increase =  setInterval(()=>{
+         increasing();
+     }, 2000)
+    
+
+
+    
+
+</script>
